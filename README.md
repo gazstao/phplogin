@@ -5,11 +5,8 @@ Este projeto implementa um sistema de login seguro usando PHP e MySQL.
 🚀 Tecnologias Utilizadas
 
 PHP 7+
-
-MySQL/MariaDB
-
+MySQL/
 Apache2 (ou Nginx)
-
 PDO para conexão segura com o banco de dados
 
 📌 Funcionalidades
@@ -23,14 +20,14 @@ PDO para conexão segura com o banco de dados
 ⚙️ Instalação
 
 1️⃣ Clonar o repositório
-'''
+
 git clone https://github.com/seuusuario/seu-repositorio.git
 cd seu-repositorio
-'''
+
 2️⃣ Configurar o Banco de Dados
 
 Execute os seguintes comandos no MySQL:
-'''
+
 CREATE DATABASE login_system;
 
 CREATE TABLE users (
@@ -47,11 +44,11 @@ CREATE TABLE login_attempts (
     attempts INT DEFAULT 0,
     last_attempt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-'''
+
 3️⃣ Configurar a Conexão com o Banco
 
 Edite o arquivo config/database.php e ajuste as credenciais:
-'''
+
 <?php
 $host = 'localhost';
 $dbname = 'login_system';
@@ -64,24 +61,15 @@ try {
 } catch (PDOException $e) {
     die("Erro na conexão: " . $e->getMessage());
 }
-'''
+
 4️⃣ Executar o Servidor
 
 Se estiver usando Apache:
-
-```
 sudo systemctl restart apache2
-```
 
 Se quiser rodar com PHP embutido:
-
-'''
 php -S localhost:8000
-'''
-
 Acesse http://localhost:8000/index.php
 
 🔒 Melhorias Futuras
-
-
 💡 Contribuições são bem-vindas! Faça um fork, contribua e envie um Pull Request! 😃
